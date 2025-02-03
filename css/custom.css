@@ -1140,32 +1140,28 @@ header.main-header .header-sticky.active{
 }
 
 .happy-patients-counter{
-	position: relative;
-	background: #01aef3;
+	position: absolute;
+	bottom: 70px;
+	left: 50px;
+	background: #01aff357;
 	border: 1px solid var(--dark-divider-color);
-	border-radius: 20px;
-	width: 245px;
-	
-	padding: 16px;
+	border-radius: 40px;
+	width: 175px;
+	height: 180px;
+	padding: 25px;
 	overflow: hidden;
 	backdrop-filter: blur(10px);
 	-webkit-backdrop-filter: blur(10px);
 	z-index: 1;
-	
 }
-.happy-patients-counter-box{
 
-display: flex;
-	align-items: flex-start;
-	gap: 16px;
-}
 .happy-patients-counter .icon-box{
 	position: relative;
 	background-color: transparent;
 	border: 1px solid var(--dark-divider-color);
 	border-radius: 14px;
-	width: 48px;
-	height: 48px;
+	width: 44px;
+	height: 44px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -1198,7 +1194,7 @@ display: flex;
 
 .happy-patients-counter .icon-box img{
 	position: relative;
-	max-width: 30px;
+	max-width: 24px;
 	z-index: 1;
 }
 
@@ -1247,15 +1243,18 @@ display: flex;
 }
 
 .experience-counter{
-	background: var(--primary-color);
-	padding: 16px;
-    border-radius: 20px;
-    width: 245px;
-    float: right;
-    display: flex;
-    align-items: flex-start;
-    gap: 16px;
-	margin-bottom: 24px;
+	position: absolute;
+    top: 70px;
+    right: 50px;
+	background: #ec323769;
+    border-radius: 40px;
+	width: 205px;
+    height: 190px;
+    padding: 25px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 1;
 }
 
 .experience-counter .icon-box{
@@ -1317,9 +1316,9 @@ display: flex;
 	margin: 0;
 }
 
-.about-content-btn{
+/* .about-content-btn{
 	margin-top: 30px;
-}
+} */
 
 /*************************************/
 /***      07. Our Service css      ***/
@@ -2292,7 +2291,7 @@ display: flex;
 	padding-bottom: 40px;
 }
 
-.footer-booking-title h2{
+.footer-booking-title h1{
 	font-size: 40px;
 	color: var(--white-color);
 	text-transform: capitalize;
@@ -2431,23 +2430,23 @@ display: flex;
 /************************************/
 
 .page-header{
-	background: url(../images/section-bg-shape.svg), var(--primary-color);
+	background: url(../images/breadccums-bg.jpg);
 	background-repeat: no-repeat;
-    background-position: bottom center;
-    background-size: auto;
-	padding: 100px 0;
+    /* background-position: left center; */
+    background-size: cover;
+	padding: 40px 0;
 }
 
 .page-header-box{
 	text-align: center;
 }
 
-.page-header-box h1{
+.page-header-box h2{
 	display: inline-block;
 	font-size: 56px;
     font-weight: 700;
 	text-align: center;
-	color: var(--white-color);
+	color: var(--primary-color);
 	margin-bottom: 10px;
 	
 }
@@ -2467,7 +2466,7 @@ display: flex;
 .page-header-box ol li.breadcrumb-item{
 	font-size: 16px;
 	font-weight: 400;
-	color: var(--white-color);
+	color: var(--text-color);
 	text-transform: capitalize;
 }
 
@@ -2476,7 +2475,7 @@ display: flex;
 }
 
 .page-header-box ol .breadcrumb-item+.breadcrumb-item::before{
-    color: var(--white-color);
+    color: var(--text-color);
 }
 
 .vision-mission{
@@ -2840,7 +2839,7 @@ display: flex;
 /************************************/
 
 .page-service-single{
-	padding: 100px 0;
+	padding: 50px 0;
 }
 
 .service-single-content{
@@ -2924,13 +2923,15 @@ display: flex;
 .service-entry ul li{
 	position: relative;
     width: 100%;
-	color: var(--primary-color);
+	color: var(--text-color);
 	font-size: 16px;
 	font-weight: 600;
 	text-transform: capitalize;
 	padding-left: 30px;
 }
-
+.service-entry ul li b{
+	color: var(--primary-color);
+}
 .service-entry ul li:before{
 	content: '\f14a';
     font-family: 'Font Awesome 6 Free';
@@ -2963,8 +2964,8 @@ display: flex;
 
 .service-catagery-list{
 	background-color: var(--secondary-color);
-	border-radius: 40px;
-	padding: 40px;
+	border-radius: 20px;
+	padding: 20px;
 	margin-bottom: 40px;
 }
 
@@ -2973,6 +2974,7 @@ display: flex;
 	font-weight: 600;
 	text-transform: capitalize;
 	margin-bottom: 30px;
+	text-align: center;
 }
 
 .service-catagery-list ul{
@@ -2990,10 +2992,12 @@ display: flex;
 	transition: all 0.3s ease-in-out;
 }
 
-.service-catagery-list ul li:hover{
+.service-catagery-list ul li:hover, .service-catagery-list ul li.active{
 	background-color: var(--accent-color);
 }
-
+.service-catagery-list ul li.active a, .service-catagery-list ul li.active a::after{
+	color: var(--white-color);
+}
 .service-catagery-list ul li:last-child{
 	margin-bottom: 0;
 }
@@ -3031,15 +3035,15 @@ display: flex;
 
 .working-time-box{
 	background-color: var(--primary-color);
-	border-radius: 40px;
-	padding: 40px;
-	margin-bottom: 40px;
+	border-radius: 20px;
+	padding: 20px;
+	margin-bottom: 20px;
 }
 
 .working-box-title{
 	border-bottom: 1px solid var(--dark-divider-color);
-	padding-bottom: 30px;
-	margin-bottom: 30px;
+	padding-bottom: 20px;
+	margin-bottom: 10px;
 }
 
 .working-box-title h3{
@@ -3927,7 +3931,7 @@ display: flex;
 /************************************/
 
 .page-contact-us{
-	padding: 100px 0 50px;
+	padding: 50px 0 40px;
 }
 
 .contact-info-box.page-contact-info-box{
@@ -4000,7 +4004,7 @@ display: flex;
 }
 
 .contact-us-form .form-group label{
-	color: var(--primary-color);
+	color: var(--text-color);
 	font-size: 16px;
 	font-weight: 500;
 	text-transform: capitalize;
@@ -4277,6 +4281,7 @@ display: flex;
 	.experience-counter{
 		padding: 20px;
 		width: auto;
+        height: auto;
 	}
 
 	.experience-counter .experience-counter-content h3{
@@ -4481,7 +4486,7 @@ display: flex;
 		margin-bottom: 20px;
 	}
 
-	.footer-booking-title h2{
+	.footer-booking-title h1{
 		font-size: 34px;
 	}
 
@@ -4530,7 +4535,7 @@ display: flex;
 	{
 		padding: 35px 0 0;
 	}
-	.page-header-box h1{
+	.page-header-box h2{
 		font-size: 46px;
 	}
 
@@ -4825,7 +4830,7 @@ display: flex;
 	}
 
 	.page-contact-us{
-		padding: 50px 0 25px;
+		padding: 40px 0 25px;
 	}
 
 	.contact-info-box.page-contact-info-box{
@@ -4968,6 +4973,8 @@ display: flex;
 
 	.experience-counter{
 		float: left;
+		top: 40px;
+        right: 20px;
 	}
 
 	.experience-counter .experience-counter-content h3{
@@ -5153,7 +5160,7 @@ display: flex;
         height: 350px;
     }
 
-	.footer-booking-title h2{
+	.footer-booking-title h1{
         font-size: 28px;
     }
 
@@ -5179,7 +5186,7 @@ display: flex;
         margin-top: 0px;
     }
 
-	.page-header-box h1{
+	.page-header-box h2{
 		font-size: 36px;
 	}
 
@@ -5474,3 +5481,58 @@ display: flex;
         font-size: 24px;
 	}
 }
+.about-content-body-contact{
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 20px 55px;
+ margin-top: 30px;
+}
+.about__contact {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	align-items: center;
+	gap: 15px;
+  }
+  .about__contact .icon {
+	width: 50px;
+	height: 50px;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--primary-color);
+	color: var(--white-color);
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-o-border-radius: 50%;
+	-ms-border-radius: 50%;
+	border-radius: 50%;
+	font-size: 25px;
+	line-height: 0;
+  }
+  .about__contact .content span {
+	display: block;
+	line-height: 1;
+	font-size: 15px;
+	margin-bottom: 8px;
+  }
+  .about__contact .content a {
+	font-size: 22px;
+	font-weight: 600;
+	line-height: 1;
+	color: var(--tg-heading-color);
+  }
+  .about__contact .content a:hover {
+	color: var(--primary-color);
+  }
